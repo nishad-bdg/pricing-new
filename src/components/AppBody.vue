@@ -2,7 +2,7 @@
   <v-container fluid>
     <div class="header-container ml-xl-12">
       <v-row>
-        <v-col xl="4" lg="6" offset-xl="1" offset-lg="2">
+        <v-col xl="4" lg="6" md="8" offset-xl="1" offset-lg="2" offset-md="2">
           <v-card class="pa-2" flat color="transparent">
             <v-tabs-items v-model="tab" style="background: transparent">
               <v-tab-item>
@@ -24,10 +24,16 @@
                   :key="item.id"
                 >
                   <div class="card-title">
-                    {{item.title}} <span class="ml-lg-4">- {{item.time}} </span>
+                    {{ item.title }}
+                    <span class="ml-lg-4">- {{ item.time }} </span>
                   </div>
 
-                  <div class="card-title">Choose Candidates</div>
+                  <div class="card-title d-md-flex d-sm-none d-none">
+                    Choose Candidates
+                  </div>
+                  <div class="mobile-eye d-md-none d-sm-flex d-flex">
+                    <img src="../assets/images/eye.svg" alt="" />
+                  </div>
                 </div>
               </v-tab-item>
             </v-tabs-items>

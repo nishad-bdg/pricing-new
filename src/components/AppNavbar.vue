@@ -14,7 +14,7 @@
 
       <div class="header-container ml-xl-12">
         <v-row>
-          <v-col xl="5" lg="6" md="8" sm="12" cols="12" offset-xl="1" offset-lg="2" offset-sm="0">
+          <v-col xl="5" lg="6" md="8" sm="8" cols="12" offset-xl="1" offset-lg="2" offset-md="2">
             <div class="header-flex">
               <div class="nav-header">Remote Talent - Price List</div>
               <div>
