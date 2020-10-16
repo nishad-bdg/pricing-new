@@ -14,7 +14,7 @@
 
       <div class="header-container ml-xl-12">
         <v-row>
-          <v-col xl="5" lg="6"  offset-xl="1" offset-lg="2">
+          <v-col xl="5" lg="6" md="8" sm="12" cols="12" offset-xl="1" offset-lg="2" offset-sm="0">
             <div class="header-flex">
               <div class="nav-header">Remote Talent - Price List</div>
               <div>
@@ -27,6 +27,7 @@
                   v-model="currency"
                   flat
                   hide-details
+                  @change="changeCurrency"
                 >
                   <template v-slot:append>
                     <img src="../assets/images/dropdown-arrow.svg" alt="" />
@@ -38,8 +39,8 @@
             <v-tabs
               background-color="transparent"
               slider-color="#0046FE"
-              show-arrows
-              class="ml-xl-n4 ml-lg-n4 mt-10"
+              hide-arrows
+              class="ml-xl-n4 ml-lg-n4 ml-sm-0 ml-n5 mt-10"
               style="position: absolute"
               v-model="tab"
             >
@@ -87,8 +88,10 @@ export default {
   },
   methods: {
     changeTab(tab) {
-      console.log(tab)
       this.$emit("update:currentTab", tab);
+    },
+    changeCurrency(){
+      console.log(this.currency);
     },
   },
 };
@@ -120,6 +123,16 @@ export default {
       font-size: 24px;
       line-height: 33px;
       color: #405899;
+      @media screen and (max-width: 959px) {
+        font-size: 18px;
+        line-height: 24.52px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 350px) {
+        font-size: 12px;
+      }
     }
     .currency {
       width: 96px;
@@ -137,6 +150,10 @@ export default {
       color: #d5d5d6 !important;
       text-transform: capitalize;
       margin-top: -20px;
+      @media screen and (max-width: 1263px) {
+        font-size: 14px;
+        line-height: 19.07px;
+      }
     }
     .tab-text-active {
       font-family: "Noto Sans" !important;
@@ -146,6 +163,10 @@ export default {
       line-height: 22px;
       color: #0046fe !important;
       text-transform: capitalize;
+      @media screen and (max-width: 1263px) {
+        font-size: 14px;
+        line-height: 19.07px;
+      }
     }
   }
 }
@@ -173,8 +194,9 @@ export default {
 .v-tabs-slider {
   min-height: 4px !important;
   border-radius: 10px 10px 0px 0px !important;
-  width: 80%;
+  width: 50% !important;
   margin-top: -2px;
+  margin-left: 15px;
 }
 .theme--light.v-select .v-select__selection--comma {
   font-family: "Noto Sans" !important;
@@ -183,5 +205,8 @@ export default {
   font-size: 14px !important;
   line-height: 16px;
   color: #0046fe !important;
+}
+.v-slide-group__prev--disabled{
+  display: none !important;
 }
 </style>
