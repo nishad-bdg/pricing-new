@@ -34,19 +34,26 @@
                 >
                   <div class="card-title">
                     {{ item.title }}
-                    <span class="ml-lg-4"
+                    <span class="ml-lg-4 ml-md-3 hidden-md-and-up"
                       >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
-                      {{ currency }}
                     </span>
                   </div>
 
-                  <div class="card-title d-md-flex d-sm-none d-none">
+                  <div class="card-title d-md-none d-sm-none d-none">
                     <a href="#"> Choose Candidates </a>
                   </div>
-                  <div class="mobile-eye d-md-none d-sm-flex d-flex">
-                    <a href="#">
-                      <img src="../assets/images/eye.svg" alt="" />
-                    </a>
+                  <div class="mobile-eye d-md-flex d-sm-flex d-flex">
+                    <div class="d-flex flex-row">
+                      <div class="mr-sm-10  card-title">
+                        <span>
+                          - {{ rateConvertion(item.rate) }}
+                          {{ item.frequency }}</span
+                        >
+                      </div>
+                      <a href="#">
+                        <img src="../assets/images/eye.svg" alt="" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </v-tab-item>

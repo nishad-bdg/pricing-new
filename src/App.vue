@@ -127,28 +127,17 @@ export default {
         description: [
           {
             id: 9,
-            title: "Non-native non-voice Agents",
-            rate: 7.5,
+            title: "Frontend Developer",
+            rate: 35,
             frequency: "/ hour"
           },
           {
             id: 10,
-            title: "Non-native non-voice Agents",
-            rate: 7.5,
+            title: "Backend Developer",
+            rate: 45,
             frequency: "/ hour"
           },
-          {
-            id: 11,
-            title: "Non-native non-voice Agents",
-            rate: 7.5,
-            frequency: "/ hour"
-          },
-          {
-            id: 12,
-            title: "Non-native non-voice Agents",
-            rate: 7.5,
-            frequency: "/ hour"
-          },
+          
         ],
       },
     ],
