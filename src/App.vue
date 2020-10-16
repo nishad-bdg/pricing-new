@@ -1,8 +1,8 @@
 <template>
   <v-app style="">
-    <AppNavbar :tabs.sync="tabs" :currentTab.sync= "currentTab" />
+    <AppNavbar :tabs.sync="tabs" :currentTab.sync= "currentTab" :currency.sync = "currency" />
     <v-main>
-      <AppBody :tabs="tabs" :currentTab="currentTab" />
+      <AppBody :tabs="tabs" :currentTab="currentTab" :currency = "currency" />
     </v-main>
   </v-app>
 </template>
@@ -19,6 +19,7 @@ export default {
   },
 
   data: () => ({
+    currency: "USD",
     currentTab: {
       id: 1,
       title: "Business Support",

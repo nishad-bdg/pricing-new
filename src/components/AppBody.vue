@@ -2,7 +2,16 @@
   <v-container fluid>
     <div class="header-container ml-xl-12">
       <v-row>
-        <v-col xl="4" lg="6" md="8" offset-xl="1" offset-lg="2" offset-md="2">
+        <v-col
+          xl="5"
+          lg="6"
+          md="8"
+          sm="8"
+          offset-xl="1"
+          offset-lg="2"
+          offset-md="2"
+          offset-sm="1"
+        >
           <v-card class="pa-2" flat color="transparent">
             <v-tabs-items v-model="tab" style="background: transparent">
               <v-tab-item>
@@ -25,14 +34,18 @@
                 >
                   <div class="card-title">
                     {{ item.title }}
-                    <span class="ml-lg-4">- {{ item.time }} </span>
+                    <span class="ml-lg-4"
+                      >- {{ item.time }} {{ currency }}
+                    </span>
                   </div>
 
                   <div class="card-title d-md-flex d-sm-none d-none">
                     Choose Candidates
                   </div>
                   <div class="mobile-eye d-md-none d-sm-flex d-flex">
-                    <img src="../assets/images/eye.svg" alt="" />
+                    <a href="#">
+                      <img src="../assets/images/eye.svg" alt="" />
+                    </a>
                   </div>
                 </div>
               </v-tab-item>
@@ -52,6 +65,9 @@ export default {
     },
     currentTab: {
       type: Object,
+    },
+    currency: {
+      type: String,
     },
   },
   data() {
@@ -88,6 +104,9 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
+    }
 
     .card-title {
       font-family: "Noto Sans" !important;

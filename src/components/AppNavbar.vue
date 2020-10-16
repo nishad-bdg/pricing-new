@@ -14,7 +14,7 @@
 
       <div class="header-container ml-xl-12">
         <v-row>
-          <v-col xl="5" lg="6" md="8" sm="8" cols="12" offset-xl="1" offset-lg="2" offset-md="2">
+          <v-col xl="4" lg="6" md="8" sm="8" cols="12" offset-xl="1" offset-lg="2" offset-md="2" offset-sm="1">
             <div class="header-flex">
               <div class="nav-header">Remote Talent - Price List</div>
               <div>
@@ -23,7 +23,7 @@
                   solo
                   :items="currencies"
                   item-text="title"
-                  item-value="id"
+                  item-value="title"
                   v-model="currency"
                   flat
                   hide-details
@@ -40,7 +40,7 @@
               background-color="transparent"
               slider-color="#0046FE"
               hide-arrows
-              class="ml-xl-n4 ml-lg-n4 ml-sm-0 ml-n5 mt-10"
+              class="ml-xl-n4 ml-lg-n4 ml-md-n4 ml-sm-n4 ml-n5 mt-10"
               style="position: absolute"
               v-model="tab"
             >
@@ -71,11 +71,14 @@ export default {
     currentTab: {
       type: Object,
     },
+    currency:{
+      type: String,
+      default: "USD"
+    },
   },
   data() {
     return {
       tab: 0,
-      currency: 1,
       currencies: [
         { id: 1, title: "USD" },
         { id: 2, title: "GDB" },
@@ -91,7 +94,7 @@ export default {
       this.$emit("update:currentTab", tab);
     },
     changeCurrency(){
-      console.log(this.currency);
+      this.$emit("update:currency",this.currency)
     },
   },
 };
