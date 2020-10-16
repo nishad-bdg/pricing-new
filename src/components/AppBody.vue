@@ -35,12 +35,13 @@
                   <div class="card-title">
                     {{ item.title }}
                     <span class="ml-lg-4"
-                      >- {{ item.time }} {{ currency }}
+                      >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
+                      {{ currency }}
                     </span>
                   </div>
 
                   <div class="card-title d-md-flex d-sm-none d-none">
-                    Choose Candidates
+                    <a href="#"> Choose Candidates </a>
                   </div>
                   <div class="mobile-eye d-md-none d-sm-flex d-flex">
                     <a href="#">
@@ -74,6 +75,32 @@ export default {
     return {
       tab: 0,
     };
+  },
+  methods: {
+    rateConvertion(rate) {
+      var usd = 1;
+      var cad = 1.32;
+      var gdb = 0.77;
+      var aud = 1.41;
+      var eur = 0.85;
+      var nzd = 1.51;
+      if (this.currency == "CAD") {
+        return (cad * rate).toFixed(2);
+      }
+      if (this.currency == "GDB") {
+        return (gdb * rate).toFixed(2);
+      }
+      if (this.currency == "AUD") {
+        return (aud * rate).toFixed(2);
+      }
+      if (this.currency == "EUR") {
+        return (eur * rate).toFixed(2);
+      }
+      if (this.currency == "NZD") {
+        return (nzd * rate).toFixed(2);
+      }
+      return (usd * rate).toFixed(2);
+    },
   },
 };
 </script>
@@ -117,6 +144,11 @@ export default {
       color: #0046fe;
       span {
         color: #002178 !important;
+      }
+      a {
+        color: #0046fe !important;
+        text-transform: capitalize !important;
+        text-decoration: none;
       }
     }
   }

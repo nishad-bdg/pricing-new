@@ -14,7 +14,17 @@
 
       <div class="header-container ml-xl-12">
         <v-row>
-          <v-col xl="4" lg="6" md="8" sm="8" cols="12" offset-xl="1" offset-lg="2" offset-md="2" offset-sm="1">
+          <v-col
+            xl="4"
+            lg="6"
+            md="8"
+            sm="8"
+            cols="12"
+            offset-xl="1"
+            offset-lg="2"
+            offset-md="2"
+            offset-sm="1"
+          >
             <div class="header-flex">
               <div class="nav-header">Remote Talent - Price List</div>
               <div>
@@ -24,10 +34,10 @@
                   :items="currencies"
                   item-text="title"
                   item-value="title"
+                  @change="changeCurrency"
                   v-model="currency"
                   flat
                   hide-details
-                  @change="changeCurrency"
                 >
                   <template v-slot:append>
                     <img src="../assets/images/dropdown-arrow.svg" alt="" />
@@ -71,9 +81,8 @@ export default {
     currentTab: {
       type: Object,
     },
-    currency:{
+    currency: {
       type: String,
-      default: "USD"
     },
   },
   data() {
@@ -87,20 +96,32 @@ export default {
         { id: 5, title: "EUR" },
         { id: 6, title: "NZD" },
       ],
+
     };
+  },
+  computed: {
+    // currencyList: {
+    //   get: function () {
+    //     return this.currencies;
+    //   },
+    //   set: function (value) {
+    //     this.$emit("update: currency", value);
+    //   },
+    // },
   },
   methods: {
     changeTab(tab) {
       this.$emit("update:currentTab", tab);
     },
-    changeCurrency(){
-      this.$emit("update:currency",this.currency)
+    changeCurrency() {
+      this.$emit("update:currency", this.currency);
     },
   },
 };
 </script>
 <style scoped lang="scss">
 .app-navbar {
+  max-width: 1920px !important;
   background-color: #ffffff;
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
   min-height: 250px;
@@ -209,7 +230,7 @@ export default {
   line-height: 16px;
   color: #0046fe !important;
 }
-.v-slide-group__prev--disabled{
+.v-slide-group__prev--disabled {
   display: none !important;
 }
 </style>
