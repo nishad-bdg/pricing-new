@@ -12,25 +12,50 @@
         <!-- profile pic -->
       </div>
 
-      <div class="header-container">
-        <div class="header-flex">
-          <div class="nav-header">Remote Talent - Price List</div>
-          <div>
-            <v-select
-              class="currency"
-              solo
-              :items="currencies"
-              item-text="title"
-              item-value="id"
-              v-model="currency"
-              flat
+      <div class="header-container ml-xl-12">
+        <v-row>
+          <v-col xl="5" lg="6"  offset-xl="1" offset-lg="2">
+            <div class="header-flex">
+              <div class="nav-header">Remote Talent - Price List</div>
+              <div>
+                <v-select
+                  class="currency"
+                  solo
+                  :items="currencies"
+                  item-text="title"
+                  item-value="id"
+                  v-model="currency"
+                  flat
+                  hide-details
+                >
+                  <template v-slot:append>
+                    <img src="../assets/images/dropdown-arrow.svg" alt="" />
+                  </template>
+                </v-select>
+              </div>
+            </div>
+            <!-- tabs -->
+            <v-tabs
+              background-color="transparent"
+              slider-color="#0046FE"
+              show-arrows
+              class="ml-xl-n4 ml-lg-n4 mt-10"
+              style="position: absolute"
+              v-model="tab"
             >
-              <template v-slot:append>
-                <img src="../assets/images/dropdown-arrow.svg" alt="" />
-              </template>
-            </v-select>
-          </div>
-        </div>
+              <v-tab
+                class="tab-text"
+                active-class="tab-text-active"
+                v-for="i in tabs"
+                :key="i.id"
+                :href="'#' + i.pills"
+                @click="changeTab(i)"
+                >{{ i.title }}</v-tab
+              >
+            </v-tabs>
+            <!-- tabs -->
+          </v-col>
+        </v-row>
       </div>
     </div>
   </v-container>
@@ -38,8 +63,17 @@
 <script>
 export default {
   name: "AppNavbar",
+  props: {
+    tabs: {
+      type: Array,
+    },
+    currentTab: {
+      type: Object,
+    },
+  },
   data() {
     return {
+      tab: 0,
       currency: 1,
       currencies: [
         { id: 1, title: "USD" },
@@ -51,13 +85,19 @@ export default {
       ],
     };
   },
+  methods: {
+    changeTab(tab) {
+      console.log(tab)
+      this.$emit("update:currentTab", tab);
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
 .app-navbar {
   background-color: #ffffff;
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
-  min-height: 252px;
+  min-height: 250px;
   padding: 30px;
 
   .logo-container {
@@ -66,25 +106,12 @@ export default {
     justify-content: space-between;
   }
   .header-container {
-    margin-left: 12rem;
-    width: 50%;
-    margin-top: 3rem;
-    @media screen and (min-width: 1264px) and (max-width: 1903px) {
-      width: 60%;
-    }
-    @media screen and (min-width: 767px) and (max-width: 959px) {
-      width: 80%;
-    }
-
-    @media screen and (max-width: 959px) {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    margin-top: 36px;
     .header-flex {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
     .nav-header {
       font-family: "Noto Sans" !important;
@@ -101,13 +128,33 @@ export default {
       box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15) !important;
       border-radius: 5px !important;
     }
+    .tab-text {
+      font-family: "Noto Sans" !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 16px;
+      line-height: 22px;
+      color: #d5d5d6 !important;
+      text-transform: capitalize;
+      margin-top: -20px;
+    }
+    .tab-text-active {
+      font-family: "Noto Sans" !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      font-size: 16px;
+      line-height: 22px;
+      color: #0046fe !important;
+      text-transform: capitalize;
+    }
   }
 }
 </style>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 .v-menu__content {
-  margin-top: 48px !important;
+  margin-top: 34px !important;
   background: #ffffff;
   box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15) !important;
   border-radius: 0px 0px 5px 5px !important;
@@ -119,5 +166,22 @@ export default {
   font-size: 12px !important;
   line-height: 16px;
   color: #0046fe;
+}
+.v-text-field.v-text-field--solo .v-input__control {
+  min-height: 34px !important;
+}
+.v-tabs-slider {
+  min-height: 4px !important;
+  border-radius: 10px 10px 0px 0px !important;
+  width: 80%;
+  margin-top: -2px;
+}
+.theme--light.v-select .v-select__selection--comma {
+  font-family: "Noto Sans" !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 16px;
+  color: #0046fe !important;
 }
 </style>
