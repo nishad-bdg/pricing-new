@@ -12,13 +12,13 @@
           offset-md="2"
           offset-sm="1"
         >
-          <v-card class="pa-2" flat color="transparent">
+          <v-card class="pa-sm-2 pa-2" flat color="transparent">
             <v-tabs-items v-model="tab" style="background: transparent">
               <v-tab-item>
-                <div class="breadcrumb">
+                <div class="breadcrumb ml-sm-0 ml-1">
                   {{ currentTab.breadcrumb }}
                 </div>
-                <div class="progress-bar mt-4">
+                <div class="progress-bar mt-4 ml-sm-0 ml-1">
                   <v-progress-linear
                     value="25"
                     background-color="#EDF2FF"
@@ -34,7 +34,7 @@
                 >
                   <div class="card-title">
                     {{ item.title }}
-                    <span class="ml-lg-4 ml-md-3 hidden-md-and-up"
+                    <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
                       >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
                     </span>
                   </div>
@@ -44,7 +44,7 @@
                   </div>
                   <div class="mobile-eye d-md-flex d-sm-flex d-flex">
                     <div class="d-flex flex-row">
-                      <div class="mr-sm-10  card-title">
+                      <div class="mr-sm-10 mr-5 card-title hidden-md-and-up">
                         <span>
                           - {{ rateConvertion(item.rate) }}
                           {{ item.frequency }}</span
@@ -141,6 +141,9 @@ export default {
     @media screen and (max-width: 767px) {
       max-width: 450px;
     }
+    @media screen and (max-width: 599px) {
+      width: 100%;
+    }
 
     .card-title {
       font-family: "Noto Sans" !important;
@@ -149,6 +152,14 @@ export default {
       font-size: 14px;
       line-height: 19px;
       color: #0046fe;
+      @media screen and (max-width: 400px) {
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: 359px) {
+        font-size: 8px;
+      }
+
       span {
         color: #002178 !important;
       }
@@ -156,6 +167,14 @@ export default {
         color: #0046fe !important;
         text-transform: capitalize !important;
         text-decoration: none;
+      }
+    }
+    .mobile-eye {
+      @media screen and (max-width: 359px) {
+        img {
+          width: 50%;
+          height: auto;
+        }
       }
     }
   }
