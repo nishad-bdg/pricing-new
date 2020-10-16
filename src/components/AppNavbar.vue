@@ -233,4 +233,8 @@ export default {
 .v-slide-group__prev--disabled {
   display: none !important;
 }
+.v-list-item{
+  min-height: 30px !important;
+  max-height: 20px !important;
+}
 </style>
