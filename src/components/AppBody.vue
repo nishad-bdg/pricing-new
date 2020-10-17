@@ -34,25 +34,32 @@
                 >
                   <div class="card-title">
                     {{ item.title }}
-                    <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
+                    <!-- <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
                       >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
-                    </span>
+                    </span> -->
                   </div>
 
-                  <div class="card-title d-lg-flex d-md-none d-sm-none d-none">
-                    <a href="#"> Choose Candidates </a>
-                  </div>
-                  <div class="mobile-eye d-lg-none d-md-flex d-sm-flex d-flex">
-                    <div class="d-flex flex-row">
-                      <div class="mr-sm-10 mr-5 card-title">
-                        <span>
-                          - {{ rateConvertion(item.rate) }}
-                          {{ item.frequency }}</span
+                  <div class="d-flex flex-lg-row-reverse flex-row">
+                    <div
+                      class="card-title d-lg-flex d-md-none d-sm-none d-none"
+                    >
+                      <a href="#"> Choose Candidates </a>
+                    </div>
+                    <div class="mobile-eye">
+                      <div class="d-flex flex-row">
+                        <div class="mr-sm-10 mr-5 card-title">
+                          <span>
+                            - {{ rateConvertion(item.rate) }}
+                            {{ item.frequency }}</span
+                          >
+                        </div>
+                        <a
+                          href="#"
+                          class="d-lg-none d-md-flex d-sm-flex d-flex"
                         >
+                          <img src="../assets/images/eye.svg" alt="" />
+                        </a>
                       </div>
-                      <a href="#">
-                        <img src="../assets/images/eye.svg" alt="" />
-                      </a>
                     </div>
                   </div>
                 </div>
