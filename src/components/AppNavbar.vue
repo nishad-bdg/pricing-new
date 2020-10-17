@@ -6,9 +6,10 @@
           <img src="../assets/images/logo.svg" alt="Logo" />
         </div>
         <!-- profile pic -->
-        <v-avatar size="50">
-          <v-img src="../assets/images/photo.svg"></v-img>
-        </v-avatar>
+        <div class="avatar">
+          <div class="badge"></div>
+          <img src="../assets/images/photo.svg" />
+        </div>
         <!-- profile pic -->
       </div>
 
@@ -96,7 +97,6 @@ export default {
         { id: 5, title: "EUR" },
         { id: 6, title: "NZD" },
       ],
-
     };
   },
   computed: {
@@ -126,6 +126,24 @@ export default {
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
   min-height: 250px;
   padding: 30px;
+
+  .avatar {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 100px !important;
+    }
+  }
+  .badge {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #42b72a;
+    z-index: 1006;
+    margin-left: 37px;
+  }
+
 
   .logo-container {
     display: flex;
@@ -233,7 +251,7 @@ export default {
 .v-slide-group__prev--disabled {
   display: none !important;
 }
-.v-list-item{
+.v-list-item {
   min-height: 30px !important;
   max-height: 20px !important;
 }
