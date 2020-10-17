@@ -44,7 +44,7 @@
                   </div>
                   <div class="mobile-eye d-lg-none d-md-flex d-sm-flex d-flex">
                     <div class="d-flex flex-row">
-                      <div class="mr-sm-10 mr-5 card-title hidden-md-and-up">
+                      <div class="mr-sm-10 mr-5 card-title">
                         <span>
                           - {{ rateConvertion(item.rate) }}
                           {{ item.frequency }}</span
