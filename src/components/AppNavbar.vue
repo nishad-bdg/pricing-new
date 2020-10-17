@@ -51,7 +51,7 @@
               background-color="transparent"
               slider-color="#0046FE"
               hide-arrows
-              class="ml-xl-n4 ml-lg-n4 ml-md-n4 ml-sm-n4 ml-n5 mt-10"
+              class="ml-xl-n4 ml-lg-n4 ml-md-n4 ml-sm-n4 ml-n5 app-tabs"
               style="position: absolute"
               v-model="tab"
             >
@@ -126,6 +126,10 @@ export default {
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
   min-height: 250px;
   padding: 30px;
+
+  .app-tabs{
+    margin-top: 33px;
+  }
 
   .avatar {
     img {
