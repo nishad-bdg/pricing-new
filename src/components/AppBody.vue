@@ -28,16 +28,17 @@
                 </div>
 
                 <div
-                  class="custom-card mt-5"
+                  class="custom-card mt-5 d-flex flex-row"
                   v-for="item in currentTab.description"
                   :key="item.id"
                 >
-                  <div class="card-title">
+                  <div class="card-title flex-grow-1">
                     {{ item.title }}
                     <!-- <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
                       >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
                     </span> -->
                   </div>
+                  
 
                   <div class="d-flex flex-lg-row-reverse flex-row">
                     <div
@@ -141,10 +142,7 @@ export default {
     background: #ffffff;
     box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
     border-radius: 5px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     @media screen and (max-width: 767px) {
       max-width: 450px;
     }
@@ -163,8 +161,12 @@ export default {
         font-size: 12px;
       }
 
+      @media screen and (max-width: 374px){
+        font-size: 10px;
+      }
+
       @media screen and (max-width: 359px) {
-        font-size: 8px;
+        font-size: 9px;
       }
 
       span {
