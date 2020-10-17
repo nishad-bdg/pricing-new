@@ -39,10 +39,10 @@
                     </span>
                   </div>
 
-                  <div class="card-title d-md-none d-sm-none d-none">
+                  <div class="card-title d-lg-flex d-md-none d-sm-none d-none">
                     <a href="#"> Choose Candidates </a>
                   </div>
-                  <div class="mobile-eye d-md-flex d-sm-flex d-flex">
+                  <div class="mobile-eye d-lg-none d-md-flex d-sm-flex d-flex">
                     <div class="d-flex flex-row">
                       <div class="mr-sm-10 mr-5 card-title hidden-md-and-up">
                         <span>
