@@ -28,43 +28,48 @@
                         class="custom-progressbar"
                       ></v-progress-linear>
                     </div>
-
+                    <!-- card -->
                     <div
                       class="custom-card mt-5 d-flex flex-row"
                       v-for="item in currentTab.description"
                       :key="item.id"
                     >
-                      <div class="card-title flex-grow-1">
-                        {{ item.title }}
-                        <!-- <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
-                      >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
-                    </span> -->
-                      </div>
-
-                      <div class="d-flex flex-lg-row-reverse flex-row">
-                        <div
-                          class="card-title d-lg-flex d-md-none d-sm-none d-none"
-                        >
-                          <a href="#"> Choose Candidates </a>
-                        </div>
-                        <div class="mobile-eye">
-                          <div class="d-flex flex-row">
-                            <div class="mr-sm-10 mr-5 card-title">
-                              <span>
-                                - {{ rateConvertion(item.rate) }}
-                                {{ item.frequency }}</span
-                              >
-                            </div>
-                            <a
-                              href="#"
-                              class="d-lg-none d-md-flex d-sm-flex d-flex"
-                            >
-                              <img src="../assets/images/eye.svg" alt="" />
-                            </a>
+                      <v-row align="center">
+                        <v-col lg="5" md="6" sm="8" cols="7">
+                          <div class="card-title">
+                            {{ item.title }}
                           </div>
-                        </div>
-                      </div>
+                        </v-col>
+                        <v-col lg="3" md="3" class="hidden-md-and-down">
+                          <div class="card-title">
+                            <span>
+                              - {{ rateConvertion(item.rate) }}
+                              {{ item.frequency }}</span
+                            >
+                          </div>
+                        </v-col>
+
+                        <v-col lg="4" md="3" cols="5" align="right" offset-md="3">
+                          <div class="card-title">
+                            <a href="#" class="hidden-md-and-down">
+                              Choose Candidates
+                            </a>
+                            <div
+                              class="mobile-eye d-lg-none d-flex flex-row justify-space-between"
+                            >
+                              <div class="card-title">
+                                <span>
+                                  - {{ rateConvertion(item.rate) }}
+                                  {{ item.frequency }}</span
+                                >
+                              </div>
+                              <img src="../assets/images/eye.svg" alt="" />
+                            </div>
+                          </div>
+                        </v-col>
+                      </v-row>
                     </div>
+                    <!-- Card -->
                   </div>
                 </div>
               </v-tab-item>
@@ -157,7 +162,7 @@ export default {
       font-family: "Noto Sans" !important;
       font-style: normal;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 19px;
       color: #0046fe;
       @media screen and (max-width: 400px) {
@@ -184,7 +189,7 @@ export default {
     .mobile-eye {
       @media screen and (max-width: 359px) {
         img {
-          width: 50%;
+          width: 20% !important;
           height: auto;
         }
       }

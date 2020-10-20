@@ -1,8 +1,16 @@
 <template>
-  <v-app style="width:100%;">
-    <AppNavbar :tabs.sync="tabs" :currentTab.sync= "currentTab" :currency.sync = "currency" />
+  <v-app style="width: 100%">
+    <AppNavbar
+      :tabs.sync="tabs"
+      :currentTab.sync="currentTab"
+      :currency.sync="currency"
+    />
     <v-main>
-      <AppBody :tabs="tabs" :currentTab="currentTab" :currency.sync = "currency" />
+      <AppBody
+        :tabs="tabs"
+        :currentTab="currentTab"
+        :currency.sync="currency"
+      />
     </v-main>
   </v-app>
 </template>
@@ -29,27 +37,27 @@ export default {
       description: [
         {
           id: 1,
-          title: "Non-Native Voice Agents",
+          title: "Non-native non-voice Agents and Non-native non-voice Agents",
           rate: 7.5,
-          frequency: "/ hour"
+          frequency: "/ hour",
         },
         {
           id: 2,
           title: "Non-native non-voice Agents",
           rate: 7.5,
-          frequency: "/ hour"
+          frequency: "/ hour",
         },
         {
           id: 3,
           title: "Native Voice Agents",
           rate: 7.5,
-          frequency: "/ hour"
+          frequency: "/ hour",
         },
         {
           id: 4,
           title: "Native non-voice Agents",
           rate: 7.5,
-          frequency: "/ hour"
+          frequency: "/ hour",
         },
       ],
     },
@@ -63,27 +71,28 @@ export default {
         description: [
           {
             id: 1,
-            title: "Non-native non-voice Agents",
+            title:
+              "Non-native non-voice Agents and Non-native non-voice Agents",
             rate: 7.5,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
           {
             id: 2,
             title: "Non-native non-voice Agents",
             rate: 7.5,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
           {
             id: 3,
-            title: "Non-native non-voice Agents",
+            title: "Native Voice Agents",
             rate: 7.5,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
           {
             id: 4,
-            title: "Non-native non-voice Agents",
+            title: "Native non-voice Agents",
             rate: 7.5,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
         ],
       },
@@ -97,25 +106,25 @@ export default {
             id: 5,
             title: "Graphic Design",
             rate: 15,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
           {
             id: 6,
             title: "Illustration",
             rate: 20,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
           {
             id: 7,
             title: "UI/UX Design",
             rate: 25,
-            frequency:"/ hour"
+            frequency: "/ hour",
           },
           {
             id: 8,
             title: "Motion/ interaction ",
             rate: 25,
-            frequency:"/ hour"
+            frequency: "/ hour",
           },
         ],
       },
@@ -129,15 +138,14 @@ export default {
             id: 9,
             title: "Frontend Developer",
             rate: 35,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
           {
             id: 10,
             title: "Backend Developer",
             rate: 45,
-            frequency: "/ hour"
+            frequency: "/ hour",
           },
-          
         ],
       },
     ],
