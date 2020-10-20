@@ -15,51 +15,54 @@
           <v-card class="pa-sm-2 pa-2" flat color="transparent">
             <v-tabs-items v-model="tab" style="background: transparent">
               <v-tab-item>
-                <div class="breadcrumb ml-sm-0 ml-1">
-                  {{ currentTab.breadcrumb }}
-                </div>
-                <div class="progress-bar mt-4 ml-sm-0 ml-1">
-                  <v-progress-linear
-                    value="25"
-                    background-color="#EDF2FF"
-                    height="3"
-                    class="custom-progressbar"
-                  ></v-progress-linear>
-                </div>
+                <div class="d-flex flex-column">
+                  <div v-for="i in 2" :key="i" class="mb-10">
+                    <div class="breadcrumb ml-sm-0 ml-1">
+                      {{ currentTab.breadcrumb }}
+                    </div>
+                    <div class="progress-bar mt-4 ml-sm-0 ml-1">
+                      <v-progress-linear
+                        value="25"
+                        background-color="#EDF2FF"
+                        height="3"
+                        class="custom-progressbar"
+                      ></v-progress-linear>
+                    </div>
 
-                <div
-                  class="custom-card mt-5 d-flex flex-row"
-                  v-for="item in currentTab.description"
-                  :key="item.id"
-                >
-                  <div class="card-title flex-grow-1">
-                    {{ item.title }}
-                    <!-- <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
+                    <div
+                      class="custom-card mt-5 d-flex flex-row"
+                      v-for="item in currentTab.description"
+                      :key="item.id"
+                    >
+                      <div class="card-title flex-grow-1">
+                        {{ item.title }}
+                        <!-- <span class="ml-lg-4 ml-md-3 hidden-md-and-down"
                       >- {{ rateConvertion(item.rate) }} {{ item.frequency }}
                     </span> -->
-                  </div>
-                  
+                      </div>
 
-                  <div class="d-flex flex-lg-row-reverse flex-row">
-                    <div
-                      class="card-title d-lg-flex d-md-none d-sm-none d-none"
-                    >
-                      <a href="#"> Choose Candidates </a>
-                    </div>
-                    <div class="mobile-eye">
-                      <div class="d-flex flex-row">
-                        <div class="mr-sm-10 mr-5 card-title">
-                          <span>
-                            - {{ rateConvertion(item.rate) }}
-                            {{ item.frequency }}</span
-                          >
-                        </div>
-                        <a
-                          href="#"
-                          class="d-lg-none d-md-flex d-sm-flex d-flex"
+                      <div class="d-flex flex-lg-row-reverse flex-row">
+                        <div
+                          class="card-title d-lg-flex d-md-none d-sm-none d-none"
                         >
-                          <img src="../assets/images/eye.svg" alt="" />
-                        </a>
+                          <a href="#"> Choose Candidates </a>
+                        </div>
+                        <div class="mobile-eye">
+                          <div class="d-flex flex-row">
+                            <div class="mr-sm-10 mr-5 card-title">
+                              <span>
+                                - {{ rateConvertion(item.rate) }}
+                                {{ item.frequency }}</span
+                              >
+                            </div>
+                            <a
+                              href="#"
+                              class="d-lg-none d-md-flex d-sm-flex d-flex"
+                            >
+                              <img src="../assets/images/eye.svg" alt="" />
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -161,7 +164,7 @@ export default {
         font-size: 12px;
       }
 
-      @media screen and (max-width: 374px){
+      @media screen and (max-width: 374px) {
         font-size: 10px;
       }
 

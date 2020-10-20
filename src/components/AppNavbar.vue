@@ -2,8 +2,8 @@
   <v-container fluid ma-0 pa-0>
     <div class="app-navbar" id="app-navbar-custom">
       <div class="logo-container">
-        <div class="align-center">
-          <img src="../assets/images/logo.svg" alt="Logo" />
+        <div class="logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
         </div>
         <!-- profile pic -->
         <div class="avatar">
@@ -127,7 +127,7 @@ export default {
   min-height: 250px;
   padding: 30px;
 
-  .app-tabs{
+  .app-tabs {
     margin-top: 33px;
   }
 
@@ -148,11 +148,14 @@ export default {
     margin-left: 37px;
   }
 
-
   .logo-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    .logo img {
+      width: 171px;
+      height: 32px;
+    }
   }
   .header-container {
     margin-top: 36px;

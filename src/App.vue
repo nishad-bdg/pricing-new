@@ -29,7 +29,7 @@ export default {
       description: [
         {
           id: 1,
-          title: "Non-native non-voice Agents",
+          title: "Non-Native Voice Agents",
           rate: 7.5,
           frequency: "/ hour"
         },
@@ -41,13 +41,13 @@ export default {
         },
         {
           id: 3,
-          title: "Non-native non-voice Agents",
+          title: "Native Voice Agents",
           rate: 7.5,
           frequency: "/ hour"
         },
         {
           id: 4,
-          title: "Non-native non-voice Agents",
+          title: "Native non-voice Agents",
           rate: 7.5,
           frequency: "/ hour"
         },
