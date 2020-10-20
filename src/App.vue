@@ -32,32 +32,48 @@ export default {
       id: 1,
       title: "Business Support",
       pills: "business-support",
-      breadcrumb:
-        "Customer Support / Telesales / Business Development / Administrators /Account Manager",
-      description: [
+      tabItems: [
         {
-          id: 1,
-          title: "Non-native non-voice Agents and Non-native non-voice Agents",
-          rate: 7.5,
-          frequency: "/ hour",
+          breadcrumb:
+            "Customer Support / Telesales / Business Development / Administrators /Account Manager",
+          description: [
+            {
+              id: 1,
+              title:
+                "Non-native non-voice Agents and Non-native non-voice Agents",
+              rate: 7.5,
+              frequency: "/ hour",
+            },
+            {
+              id: 2,
+              title: "Non-native non-voice Agents",
+              rate: 7.5,
+              frequency: "/ hour",
+            },
+            {
+              id: 3,
+              title: "Native Voice Agents",
+              rate: 7.5,
+              frequency: "/ hour",
+            },
+            {
+              id: 4,
+              title: "Native non-voice Agents",
+              rate: 7.5,
+              frequency: "/ hour",
+            },
+          ],
         },
         {
-          id: 2,
-          title: "Non-native non-voice Agents",
-          rate: 7.5,
-          frequency: "/ hour",
-        },
-        {
-          id: 3,
-          title: "Native Voice Agents",
-          rate: 7.5,
-          frequency: "/ hour",
-        },
-        {
-          id: 4,
-          title: "Native non-voice Agents",
-          rate: 7.5,
-          frequency: "/ hour",
+          breadcrumb: "Accounting / Bookkeeping",
+          description: [
+            {
+              id: 20,
+              title: "Non-native CPA",
+              rate: "12.50",
+              frequency: "/ hour",
+            },
+          ],
         },
       ],
     },
@@ -66,33 +82,48 @@ export default {
         id: 1,
         title: "Business Support",
         pills: "business-support",
-        breadcrumb:
-          "Customer Support / Telesales / Business Development / Administrators /Account Manager",
-        description: [
+        tabItems: [
           {
-            id: 1,
-            title:
-              "Non-native non-voice Agents and Non-native non-voice Agents",
-            rate: 7.5,
-            frequency: "/ hour",
+            breadcrumb:
+              "Customer Support / Telesales / Business Development / Administrators /Account Manager",
+            description: [
+              {
+                id: 1,
+                title:
+                  "Non-native non-voice Agents and Non-native non-voice Agents",
+                rate: 7.5,
+                frequency: "/ hour",
+              },
+              {
+                id: 2,
+                title: "Non-native non-voice Agents",
+                rate: 7.5,
+                frequency: "/ hour",
+              },
+              {
+                id: 3,
+                title: "Native Voice Agents",
+                rate: 7.5,
+                frequency: "/ hour",
+              },
+              {
+                id: 4,
+                title: "Native non-voice Agents",
+                rate: 7.5,
+                frequency: "/ hour",
+              },
+            ],
           },
           {
-            id: 2,
-            title: "Non-native non-voice Agents",
-            rate: 7.5,
-            frequency: "/ hour",
-          },
-          {
-            id: 3,
-            title: "Native Voice Agents",
-            rate: 7.5,
-            frequency: "/ hour",
-          },
-          {
-            id: 4,
-            title: "Native non-voice Agents",
-            rate: 7.5,
-            frequency: "/ hour",
+            breadcrumb: "Accounting / Bookkeeping",
+            description: [
+              {
+                id: 20,
+                title: "Non-native CPA",
+                rate: "12.50",
+                frequency: "/ hour",
+              },
+            ],
           },
         ],
       },
@@ -100,31 +131,35 @@ export default {
         id: 2,
         title: "Design",
         pills: "design",
-        breadcrumb: "Design",
-        description: [
+        tabItems: [
           {
-            id: 5,
-            title: "Graphic Design",
-            rate: 15,
-            frequency: "/ hour",
-          },
-          {
-            id: 6,
-            title: "Illustration",
-            rate: 20,
-            frequency: "/ hour",
-          },
-          {
-            id: 7,
-            title: "UI/UX Design",
-            rate: 25,
-            frequency: "/ hour",
-          },
-          {
-            id: 8,
-            title: "Motion/ interaction ",
-            rate: 25,
-            frequency: "/ hour",
+            breadcrumb: "Design",
+            description: [
+              {
+                id: 5,
+                title: "Graphic Design",
+                rate: 15,
+                frequency: "/ hour",
+              },
+              {
+                id: 6,
+                title: "Illustration",
+                rate: 20,
+                frequency: "/ hour",
+              },
+              {
+                id: 7,
+                title: "UI/UX Design",
+                rate: 25,
+                frequency: "/ hour",
+              },
+              {
+                id: 8,
+                title: "Motion/ interaction ",
+                rate: 25,
+                frequency: "/ hour",
+              },
+            ],
           },
         ],
       },
@@ -132,19 +167,23 @@ export default {
         id: 3,
         title: "Software Development",
         pills: "software-development",
-        breadcrumb: "Software Development",
-        description: [
+        tabItems: [
           {
-            id: 9,
-            title: "Frontend Developer",
-            rate: 35,
-            frequency: "/ hour",
-          },
-          {
-            id: 10,
-            title: "Backend Developer",
-            rate: 45,
-            frequency: "/ hour",
+            breadcrumb: "Software Development",
+            description: [
+              {
+                id: 9,
+                title: "Frontend Developer",
+                rate: 35,
+                frequency: "/ hour",
+              },
+              {
+                id: 10,
+                title: "Backend Developer",
+                rate: 45,
+                frequency: "/ hour",
+              },
+            ],
           },
         ],
       },

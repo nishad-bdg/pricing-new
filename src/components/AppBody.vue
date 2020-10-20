@@ -16,9 +16,9 @@
             <v-tabs-items v-model="tab" style="background: transparent">
               <v-tab-item>
                 <div class="d-flex flex-column">
-                  <div v-for="i in 2" :key="i" class="mb-10">
+                  <div v-for="(tab,index) in currentTab.tabItems" :key="index" class="mb-10">
                     <div class="breadcrumb ml-sm-0 ml-1">
-                      {{ currentTab.breadcrumb }}
+                      {{ tab.breadcrumb }}
                     </div>
                     <div class="progress-bar mt-4 ml-sm-0 ml-1">
                       <v-progress-linear
@@ -31,7 +31,7 @@
                     <!-- card -->
                     <div
                       class="custom-card mt-5 d-flex flex-row"
-                      v-for="item in currentTab.description"
+                      v-for="item in tab.description"
                       :key="item.id"
                     >
                       <v-row align="center">
@@ -49,7 +49,7 @@
                           </div>
                         </v-col>
 
-                        <v-col lg="4" md="3" cols="5" align="right" offset-md="3">
+                        <v-col lg="4" md="3" cols="5" align="right" offset-lg="0" offset-md="3">
                           <div class="card-title">
                             <a href="#" class="hidden-md-and-down">
                               Choose Candidates
