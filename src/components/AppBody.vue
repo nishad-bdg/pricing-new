@@ -35,12 +35,12 @@
                       :key="item.id"
                     >
                       <v-row align="center">
-                        <v-col lg="5" md="6" sm="8" cols="7">
+                        <v-col xl="5" lg="5" md="6" sm="8" cols="7">
                           <div class="card-title">
                             {{ item.title }}
                           </div>
                         </v-col>
-                        <v-col lg="3" md="3" class="hidden-md-and-down">
+                        <v-col xl="3" lg="3" md="3" class="hidden-md-and-down">
                           <div class="card-title">
                             <span>
                               - {{ rateConvertion(item.rate) }}
@@ -49,7 +49,7 @@
                           </div>
                         </v-col>
 
-                        <v-col lg="4" md="3" cols="5" align="right" offset-lg="0" offset-md="3">
+                        <v-col xl="4" lg="4" md="3" cols="5" align="right" offset-lg="0" offset-md="3">
                           <div class="card-title">
                             <a href="#" class="hidden-md-and-down">
                               Choose Candidates
@@ -162,10 +162,10 @@ export default {
       font-family: "Noto Sans" !important;
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 16px;
       line-height: 19px;
       color: #0046fe;
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 1903px) {
         font-size: 12px;
       }
 
